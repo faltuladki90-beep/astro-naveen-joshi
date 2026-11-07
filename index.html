@@ -38,6 +38,40 @@ section{padding:88px 0;position:relative}.sectionhead{text-align:center;max-widt
 section:nth-of-type(even){background-color:#f6eddf;color:#3a1a18}section:nth-of-type(even) .muted{color:#6d5550}section:nth-of-type(even) .sectionhead h2{color:#7b4828}
 .nav .brand strong{font-size:16px}.seal{background:radial-gradient(circle,#6a3a1e,#240b12)}
 @media(max-width:650px){.ganesh-hero{min-height:660px}.ganesh-placeholder{width:150px;height:150px;font-size:78px}.divine-copy .eyebrow{font-size:14px}.hero-particles{font-size:14px;letter-spacing:8px}.petal{font-size:17px}}
+
+/* Ganesha image: keep it inside the original Om circle */
+.ganesh-placeholder{
+  width:190px !important;
+  height:190px !important;
+  min-width:190px !important;
+  max-width:190px !important;
+  margin:22px auto 16px !important;
+  padding:5px !important;
+  box-sizing:border-box !important;
+  border:2px solid var(--gold) !important;
+  border-radius:50% !important;
+  overflow:hidden !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  background:radial-gradient(circle,#6c3d1b,#250c12 70%) !important;
+  box-shadow:0 0 0 10px #d9b56e12,0 0 60px #e6b85b55,inset 0 0 35px #e6b85b30 !important;
+  line-height:0 !important;
+}
+.ganesh-placeholder img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  border-radius:50% !important;
+}
+@media(max-width:650px){
+ .ganesh-placeholder{width:190px !important;height:190px !important;min-width:190px !important;max-width:190px !important}
+}
+
 </style>
 </head>
 <body>
