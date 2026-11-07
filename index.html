@@ -72,6 +72,11 @@ section:nth-of-type(even){background-color:#f6eddf;color:#3a1a18}section:nth-of-
  .ganesh-placeholder{width:190px !important;height:190px !important;min-width:190px !important;max-width:190px !important}
 }
 
+
+.music-toggle{position:fixed;left:18px;bottom:20px;z-index:1000;border:1px solid #d9b56e;background:linear-gradient(145deg,#5b2c24,#260c13);color:#f6dfaa;padding:12px 17px;border-radius:30px;font:600 13px var(--sans);box-shadow:0 7px 24px #0008,0 0 18px #d9b56e30;cursor:pointer;transition:transform .25s,box-shadow .25s}
+.music-toggle:hover{transform:translateY(-3px);box-shadow:0 10px 28px #0009,0 0 24px #d9b56e66}
+.music-toggle.playing{background:linear-gradient(145deg,#93652d,#4b241b)}
+@media(max-width:600px){.music-toggle{left:12px;bottom:14px;padding:10px 13px;font-size:12px}}
 </style>
 </head>
 <body>
@@ -95,8 +100,27 @@ section:nth-of-type(even){background-color:#f6eddf;color:#3a1a18}section:nth-of-
 </main>
 <footer class="footer"><div class="wrap center"><div style="color:var(--gold);font-size:20px">॥ श्री गणेशाय नमः ॥</div><strong>श्री गजानन ज्योतिष कार्यालय</strong><p>पं. नवीन जोशी जुनरकर</p><p>मोबाइल / WhatsApp: 9893048162</p><p>परामर्श समय: दोपहर 1:00 बजे से शाम 4:00 बजे तक।</p><p>© <span id="year"></span> सर्वाधिकार सुरक्षित।</p></div></footer>
 <a class="wa" href="https://wa.me/919893048162" target="_blank" rel="noopener">WhatsApp</a>
+
+<audio id="siteMusic" loop preload="auto">
+  <source src="https://d2ol7oe51mr4n9.cloudfront.net/user_3CMMI7T5nYBBBdvtTGyIFCSO9AG/d23a3056-35f8-4cfc-b3b3-1c05105f144c.mp3" type="audio/mpeg">
+</audio>
+<button id="musicToggle" class="music-toggle" type="button" aria-label="पृष्ठभूमि संगीत चलाएँ">♫ संगीत चालू करें</button>
+
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
+
+const siteMusic=document.getElementById('siteMusic');
+const musicToggle=document.getElementById('musicToggle');
+siteMusic.volume=0.24;
+musicToggle.addEventListener('click',async()=>{
+  if(siteMusic.paused){
+    try{await siteMusic.play();musicToggle.textContent='♫ संगीत बंद करें';musicToggle.classList.add('playing');musicToggle.setAttribute('aria-label','पृष्ठभूमि संगीत बंद करें');}
+    catch(e){musicToggle.textContent='संगीत चलाने के लिए फिर दबाएँ';}
+  }else{
+    siteMusic.pause();musicToggle.textContent='♫ संगीत चालू करें';musicToggle.classList.remove('playing');musicToggle.setAttribute('aria-label','पृष्ठभूमि संगीत चलाएँ');
+  }
+});
+
 document.getElementById('enquiry').addEventListener('submit',function(e){e.preventDefault();const n=document.getElementById('name').value.trim(),t=document.getElementById('topic').value,m=document.getElementById('message').value.trim();const msg='नमस्ते, मेरा नाम '+n+' है। मुझे '+t+' के लिए परामर्श चाहिए। '+m;window.open('https://wa.me/919893048162?text='+encodeURIComponent(msg),'_blank')});
 const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
