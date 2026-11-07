@@ -83,6 +83,16 @@ section:nth-of-type(even){background-color:#f6eddf;color:#3a1a18}section:nth-of-
 .rating-stars label{font:36px/1 Arial,sans-serif;color:#c8b99f;cursor:pointer;transition:color .2s,transform .2s}
 .rating-stars label:hover,.rating-stars label:hover~label,.rating-stars input:checked~label{color:#c28a27}
 .rating-stars label:hover{transform:scale(1.12)}
+
+.portrait-feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.portrait-feature{overflow:hidden;border:1px solid #b88c586c;border-radius:10px;background:linear-gradient(145deg,#fffaf1,#efe0cc);box-shadow:0 18px 42px #3a1a1820;transition:transform .35s,box-shadow .35s}
+.portrait-feature:hover{transform:translateY(-7px);box-shadow:0 25px 50px #3a1a1830}
+.portrait-feature img{display:block;width:100%;height:auto;max-height:760px;object-fit:contain;background:#2b1717}
+.portrait-copy{padding:24px 27px 28px}
+.portrait-copy .eyebrow{color:#93652d}
+.portrait-copy h3{font-size:23px;color:#754323;margin:8px 0 10px}
+.portrait-copy p{color:#604c42;margin:0}
+@media(max-width:700px){.portrait-feature-grid{grid-template-columns:1fr}.portrait-copy{padding:20px}}
 </style>
 </head>
 <body>
@@ -91,6 +101,35 @@ section:nth-of-type(even){background-color:#f6eddf;color:#3a1a18}section:nth-of-
 <main>
 <section class="hero ganesh-hero" id="home"><div class="temple-rays"></div><div class="hero-particles" aria-hidden="true">✦　·　✧　　·　✦　　✧　·　✦　　·　✧</div><div class="wrap"><div class="hero-inner divine-copy"><div class="eyebrow">॥ श्री गणेशाय नमः ॥</div><div class="ganesh-placeholder"><img src="https://raw.githubusercontent.com/faltuladki90-beep/astro-naveen-joshi/main/Radiant%20Ganesha%20in%20a%20Golden%20Shrine.png" alt="श्री गणेश जी का दिव्य स्वरूप" loading="eager" fetchpriority="high"></div><h1><span>श्री गजानन ज्योतिष कार्यालय</span></h1><h2 class="pandit-name">पं. नवीन जोशी जुनरकर</h2><p>ज्योतिष शास्त्र के माध्यम से जीवन के महत्वपूर्ण प्रश्नों को समझने और उचित मार्गदर्शन प्राप्त करने का एक विनम्र प्रयास।</p><div class="actions"><a class="btn" href="#about">हमारे बारे में जानें</a><a class="btn outline" href="#appointment">परामर्श बुक करें</a></div></div></div><div class="mandala" aria-hidden="true"><div class="ring"></div></div><span class="petal petal-one">✿</span><span class="petal petal-two">✧</span><span class="petal petal-three">✿</span></section>
 <section id="about"><div class="wrap aboutgrid"><div class="reveal"><img class="intro-photo" src="https://d2ol7oe51mr4n9.cloudfront.net/user_3CMMI7T5nYBBBdvtTGyIFCSO9AG/61e986ac-4af3-4826-bde4-52272ddc9ab6.jpg" alt="ज्योतिषाचार्य नवीन जोशी कुंडली का अध्ययन करते हुए"></div><div class="reveal delay1 about-copy"><div class="eyebrow">हमारा परिचय</div><h2 style="color:var(--gold);font-size:32px">पं. नवीन जोशी जुनरकर</h2><div class="experience">✦ 30+ वर्षों का ज्योतिषीय अनुभव</div><p class="muted">तीन दशकों से अधिक के अनुभव के साथ, ज्योतिषाचार्य नवीन जोशी जन्म कुंडली, ग्रहों की स्थिति, विवाह मिलान, वास्तु एवं जीवन से जुड़े महत्वपूर्ण प्रश्नों पर पारंपरिक ज्योतिषीय पद्धति के अनुसार परामर्श प्रदान करते हैं।</p><p class="muted">हमारा प्रयास है कि प्रत्येक व्यक्ति को उसकी जन्म कुंडली का सरल, स्पष्ट और समझने योग्य विश्लेषण मिले। आपकी व्यक्तिगत जानकारी और प्रश्नों की गोपनीयता का सम्मान करते हुए, बिना अनावश्यक भय या भ्रम के संतुलित मार्गदर्शन देना हमारी प्राथमिकता है।</p><p style="color:var(--gold);font-weight:600">“अनुभव, पारंपरिक ज्ञान और विश्वास — यही हमारी पहचान है।”</p></div></div></section>
+
+
+<section id="jyotish-drishhti" style="background:linear-gradient(180deg,#f6eddf,#ead9c7);color:#3a1a18">
+ <div class="wrap">
+  <div class="sectionhead reveal">
+   <div class="orn">✧ ✧ ✧</div>
+   <h2 style="color:#7b4828">ज्योतिष, परंपरा और जीवन-दृष्टि</h2>
+   <p style="color:#6d5550">ज्ञान, धैर्य और संवेदनशील संवाद के साथ कुंडली-अध्ययन एवं मार्गदर्शन।</p>
+  </div>
+  <div class="portrait-feature-grid">
+   <article class="portrait-feature reveal">
+    <img src="WhatsApp%20Image%202026-11-02%20at%2014.19.38%283%29.jpeg" alt="पं. नवीन जोशी जुनरकर ज्योतिषीय अध्ययन कक्ष में" loading="lazy">
+    <div class="portrait-copy">
+     <div class="eyebrow">ज्योतिषीय अध्ययन</div>
+     <h3>परंपरा के साथ विवेकपूर्ण दृष्टिकोण</h3>
+     <p>जन्म-कुंडली और ग्रह-स्थितियों का अध्ययन धैर्यपूर्वक सुनने, उपलब्ध विवरणों को समझने और सरल भाषा में बात रखने का अवसर है। हमारा उद्देश्य प्रश्नों को गंभीरता से समझकर संतुलित एवं स्पष्ट मार्गदर्शन देना है।</p>
+    </div>
+   </article>
+   <article class="portrait-feature reveal delay1">
+    <img src="WhatsApp%20Image%202026-11-02%20at%2014.16.53%284%29.jpeg" alt="पं. नवीन जोशी जुनरकर पारंपरिक ज्योतिषीय वेशभूषा में" loading="lazy">
+    <div class="portrait-copy">
+     <div class="eyebrow">पं. नवीन जोशी जुनरकर</div>
+     <h3>सरल व्यवहार, स्पष्ट संवाद और सम्मानपूर्ण परामर्श</h3>
+     <p>हर व्यक्ति की परिस्थिति और प्रश्न अलग होते हैं। इसलिए परामर्श में ध्यानपूर्वक सुनना, बात को सहज ढंग से समझाना और व्यक्तिगत जानकारी की गोपनीयता का सम्मान करना हमारी प्राथमिकता है।</p>
+    </div>
+   </article>
+  </div>
+ </div>
+</section>
 
 <section id="services" style="background:linear-gradient(180deg,#181121,#130c1d)"><div class="wrap"><div class="sectionhead reveal"><div class="orn">✧ ✧ ✧</div><h2>हमारी ज्योतिषीय सेवाएँ</h2><p>आपकी आवश्यकता के अनुसार व्यक्तिगत मार्गदर्शन।</p></div><div class="cards">
 <article class="card reveal"><div class="ico">☸</div><h3>जन्म पत्रिका देखना</h3><p class="price">₹251</p><p class="muted">जन्म विवरण के आधार पर पारंपरिक ज्योतिषीय अध्ययन।</p></article>
